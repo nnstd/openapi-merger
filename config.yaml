@@ -1,8 +1,7 @@
-plugins:
-  app:
-    title: "Openapi merger"
-  serving:
-    port: 7560
-  merge:
-    upstreams:
-      - http://localhost/openapi.json
+app:
+  title: "Openapi merger"
+serving:
+  port: 7560
+merge:
+  upstreams:
+    - http://localhost/openapi.json
