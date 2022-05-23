@@ -22,3 +22,7 @@ plugins:
     upstreams:
       - http://localhost/openapi.json
 ```
+
+docker image: `ghcr.io/nnstd/openapi-merger:main`
+
+docker example: `docker run -v $(pwd)/config.yaml:/app/config.yaml -p 7560:7560 ghcr.io/nnstd/openapi-merger:main`
