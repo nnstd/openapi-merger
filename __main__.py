@@ -141,11 +141,11 @@ openapi_original = app.openapi
 def openapi():
     source = {}
 
-    for upstream in Config.merge.upstreams:
+    for upstream in cfg.merge.upstreams:
         target: dict = requests.get(upstream).json()
         source = merge(source, target)
     source = merge(source, openapi_original())
-    source.update(Config.merge.override)
+    source.update(cfg.merge.override)
 
     return source
 
